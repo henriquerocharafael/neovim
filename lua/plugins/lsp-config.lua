@@ -20,8 +20,21 @@ return {
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
       local lspconfig = require("lspconfig")
 
+      -- lua
       lspconfig.lua_ls.setup({})
+
+      -- typescript
       lspconfig.tsserver.setup({
+        capabilities = capabilities
+      })
+
+      -- tailwind
+      lspconfig.tailwindcss.setup({
+        capabilities = capabilities
+      })
+
+      -- prisma
+      lspconfig.prismals.setup({
         capabilities = capabilities
       })
 
